@@ -4,7 +4,7 @@ session_start();
 require_once('oci-dbhelper.php');
 
 if (isset($_SESSION['Email'])){
-  header('Location: Main.php?logInAlready=not');
+  header('Location: index.php?logInAlready=not');
 }
 
 // TESTING
@@ -35,7 +35,7 @@ if (isset($_POST['signinButton'])) {
     //ALSO HAVE SO REPOPULATE THE COPIED TABLE HERE!!!!!! (do it later!)
 
     // redirect them to the homepage
-    header('Location: Main.php?mess1=not');
+    header('Location: index.php?mess1=not');
   }
 }
 ?>

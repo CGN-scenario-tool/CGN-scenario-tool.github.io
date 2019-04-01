@@ -32,8 +32,6 @@ if ($checkSame == 'Change True') {
   VALUES ( TO_CHAR(CURRENT_TIMESTAMP, 'HH24:MI:SS'), '{$uniqueLogID}', '{$_SESSION['Email']}')";
   $stmtToUpdateLog = runquery($queryToUpdateLog);
 
-  // After all the queries above are executed successfully, add a new log into SESSION array ['LogId'] to update the Chang Log Box (code of that is in Main.php)
-  //array_unshift($_SESSION['LogId'], $uniqueLogID);
 }
 
 $x = count($_SESSION['viewing']);

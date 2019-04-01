@@ -33,7 +33,7 @@ if (isset($_POST['getItemButton'])) {
 	$viewingItem = getOneRow($queryToGetViewingItem);
 
 	if ($viewingItem == 'Error' ){
-		header("Location: Main.php?mess=not");
+		header("Location: index.php?mess=not");
 	}
 	else {
 
@@ -48,13 +48,13 @@ if (isset($_POST['getItemButton'])) {
 
       	// If the index exists
       	if(isset($indexOfExisting)) {
-			header("Location: Main.php?messDuplicate=not");
+			header("Location: index.php?messDuplicate=not");
       	} else {
         // Add the new item into the cart
       		$startingChannel = $viewingItem['CHANNEL'] ; 
       		$viewingItem['TRACKING_CHANNEL'] = $startingChannel;
       		array_push($_SESSION['viewing'], $viewingItem);
-			header("Location: Main.php");
+			header("Location: index.php");
       	}
 	}
 }
